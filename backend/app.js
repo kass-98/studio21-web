@@ -1,7 +1,10 @@
 import express from 'express';
 import cors from 'cors';
 
-import authRoutes from './routes/authRoutes.js';
+import authRoutes from './src/routes/authRoutes.js';
+
+import { auth } from './src/middlewares/authMiddleware.js';
+
 
 
 const app = express();
@@ -21,12 +24,6 @@ app.get('/protegida', auth, (req, res) => {
 });
 
 // ruta solo admin
-app.get('/admin', auth, authorize('admin'), (req, res) => {
-  res.json({
-    message: 'Bienvenido admin',
-    user: req.user,
-    role: req.user.role
-  });
-});
+
 
 export default app;

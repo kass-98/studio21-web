@@ -1,16 +1,16 @@
 import bcrypt from 'bcrypt';
-import {User} from '../models/User.js';
+import User from '../models/User.js';
 import jwt from 'jsonwebtoken';
 
 
 //controlador registro usuario
 export const registro = async (req, res)=>{
   try{
-    const {email, password}= req.body;
+    const {name, email, password}= req.body;
 
     //validar que contenga email y password el body
-    if(!email||!password){
-      return res.status(400).json({message: 'Email y password son requeridos'});
+    if(!name || !email||!password){
+      return res.status(400).json({message: 'Name, Email y password son requeridos'});
     }
     const existingUser = await User.findOne({email});
     if (existingUser){
@@ -19,15 +19,16 @@ export const registro = async (req, res)=>{
 
     const passwordEncriptado = await bcrypt.hash(password, 7);
     const user = new User({
+      name,
       email,
       password: passwordEncriptado
     });
     await user.save();
     res.status(200).json({message: 'usuario registrado exitosamente'});
-  }catch(error){
-    res.status(500).json({message: 'algo salio mal'});
-
-  }
+  }catch (error) {
+  console.log("ERROR REAL:", error);
+  res.status(500).json({ message: error.message });
+}
 }
 
 //controlador login de usuario
