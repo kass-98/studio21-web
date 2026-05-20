@@ -6,7 +6,7 @@ import jwt from 'jsonwebtoken';
 //controlador registro usuario
 export const registro = async (req, res)=>{
   try{
-    const {name, email, password}= req.body;
+    const {name, email, password, role}= req.body;
 
     //validar que contenga email y password el body
     if(!name || !email||!password){
@@ -21,10 +21,11 @@ export const registro = async (req, res)=>{
     const user = new User({
       name,
       email,
-      password: passwordEncriptado
+      password: passwordEncriptado,
+      role
     });
     await user.save();
-    res.status(200).json({message: 'usuario registrado exitosamente'});
+    res.status(201).json({message: 'usuario registrado exitosamente'});
   }catch (error) {
   console.log("ERROR REAL:", error);
   res.status(500).json({ message: error.message });
@@ -57,11 +58,24 @@ export const login = async (req, res) => {
       process.env.JWT_SECRET,
       {expiresIn: '1h'}
   );
-  res.json({token, message: 'login exitoso'});
+      res.json({
+      token,
+      user: {
+        id: user._id,
+        name: user.name,
+        role: user.role
+      },
+      message: 'login exitoso'
+    });
   
   }
   catch(error){
-    res.status(500).json({message: 'algo salio mal'});
+     console.log("ERROR LOGIN:", error);
+
+    res.status(500).json({
+      message: error.message
+    });
+
 
   }
 }

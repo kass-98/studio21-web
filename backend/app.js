@@ -4,12 +4,13 @@ import cors from 'cors';
 import authRoutes from './src/routes/authRoutes.js';
 
 import { auth } from './src/middlewares/authMiddleware.js';
-
+import { authorize } from './src/middlewares/roleMiddleware.js';
 
 
 const app = express();
 
 app.use(cors());
+
 app.use(express.json());
 
 // rutas públicas de auth
@@ -24,6 +25,14 @@ app.get('/protegida', auth, (req, res) => {
 });
 
 // ruta solo admin
+app.get('/admin', auth, authorize('admin'), (req, res) => {
+
+  res.json({
+    message: 'Bienvenido administrador',
+    user: req.user
+  });
+
+});
 
 
 export default app;

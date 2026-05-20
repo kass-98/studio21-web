@@ -6,22 +6,37 @@ const userSchema = new mongoose.Schema({
     required: true,
   },
 
+  phone: {
+    type: String,
+    required: false,
+  },
+
   email: {
     type: String,
-    required: true,
+    required: function () {
+      return this.role !== 'client';
+    },
     unique: true,
+    sparse: true
   },
 
   password: {
     type: String,
-    required: true,
+    required: function () {
+      return this.role !== 'client';
+    },
   },
 
   role: {
     type: String,
-    enum: ['user', 'admin'],
-    default: 'user'
+    enum: ['admin', 'partner', 'asistente', 'client'],
+    default: 'client'
   },
+
+  createdBy: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User"
+  }
 
 }, { timestamps: true });
 
