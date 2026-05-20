@@ -2,10 +2,10 @@ import express from 'express';
 import cors from 'cors';
 
 import authRoutes from './src/routes/authRoutes.js';
+import bookingRoutes from './src/routes/bookingRoutes.js';
 
 import { auth } from './src/middlewares/authMiddleware.js';
 import { authorize } from './src/middlewares/roleMiddleware.js';
-
 
 const app = express();
 
@@ -15,6 +15,9 @@ app.use(express.json());
 
 // rutas públicas de auth
 app.use('/api/auth', authRoutes);
+
+//rutas de reservas
+app.use('/api/bookings', bookingRoutes);
 
 // ruta protegida (cualquier usuario logueado)
 app.get('/protegida', auth, (req, res) => {
