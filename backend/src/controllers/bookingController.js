@@ -56,7 +56,10 @@ export const updateBooking = async (req, res) => {
       { new: true }
     );
 
-    res.json(booking);
+    res.json({
+      message: "Reserva actualizada correctamente",
+      booking
+  });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
