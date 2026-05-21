@@ -1,7 +1,7 @@
-import app from './backend/app.js';
+import app from './app.js';
 import express from 'express';
 import dotenv from 'dotenv';
-import { connectDB } from './backend/src/config/db.js';
+import { connectDB } from './src/config/db.js';
 dotenv.config();
 
 
