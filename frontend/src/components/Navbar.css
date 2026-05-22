@@ -1,0 +1,32 @@
+.custom-navbar {
+  background-color: white;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.logo {
+  color: black;
+  font-weight: 700;
+  font-size: 1.7rem;
+  text-decoration: none;
+  font-family: "Cinzel", serif;
+  letter-spacing: 2px;
+}
+
+.custom-link:hover {
+  color: rgb(0, 0, 0);
+}
+
+.login-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.custom-link {
+  color: black;
+  font-family: "Akt", sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+}
