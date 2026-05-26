@@ -1,0 +1,165 @@
+.hero{
+  width: 100%;
+  min-height: 90vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: black;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* Caja blanca */
+.hero-card{
+  width: 550px;
+  height: 380px;
+
+  background: #f3f3f3;
+  color: black;
+
+  position: absolute;
+  left: 70px;
+  z-index: 10;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+}
+
+/* Texto superior */
+.hero-subtitle{
+  font-family: "Cinzel", serif;
+
+  font-size: 18px;
+  letter-spacing: 4px;
+
+  text-align: center;
+
+  margin-bottom: 30px;
+}
+
+/* Título principal */
+.hero-card h1{
+  font-family: "Akt", sans-serif;
+
+  font-size: 58px;
+  font-weight: 500;
+
+  line-height: 1.1;
+  text-align: center;
+
+  margin: 0;
+}
+
+/* Botón */
+.hero-card button{
+  margin-top: 40px;
+
+  border: none;
+  background: transparent;
+
+  border-bottom: 1px solid black;
+
+  padding-bottom: 5px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.hero-card button:hover{
+  opacity: 0.7;
+}
+
+/* Imagen */
+.hero-image{
+  width: 65%;
+  margin-left: 250px;
+}
+
+.hero-image img{
+  width: 100%;
+  height: 85vh;
+
+  object-fit: cover;
+
+  filter: grayscale(100%);
+}
+
+/*resposinve inico*/
+/* RESPONSIVE */
+
+@media (max-width:768px){
+
+.hero{
+  min-height: auto;
+
+  flex-direction: column;
+
+  padding: 20px;
+
+  overflow: visible;
+}
+
+/* Card */
+.hero-card{
+
+  position: relative;
+
+  left: 0;
+
+  width: 100%;
+  max-width: 380px;
+
+  height: auto;
+
+  padding: 35px 25px;
+
+  order: 2;
+
+}
+
+/* Imagen */
+.hero-image{
+
+  width: 100%;
+
+  margin-left: 0;
+
+  order: 1;
+
+}
+
+.hero-image img{
+
+  width: 100%;
+
+  height: 320px;
+
+  object-fit: cover;
+
+}
+
+/* Textos */
+
+.hero-subtitle{
+
+  font-size: 12px;
+
+  letter-spacing: 2px;
+
+}
+
+.hero-card h1{
+
+  font-size: 42px;
+
+}
+
+}

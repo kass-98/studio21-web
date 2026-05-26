@@ -30,3 +30,64 @@
   font-size: 0.95rem;
   letter-spacing: 1px;
 }
+
+.navbar-toggler{
+  border: none;
+}
+
+.navbar-toggler:focus{
+  box-shadow: none;
+}
+
+.custom-navbar{
+  background-color: white;
+  position: relative;
+  z-index: 1000;
+}
+
+@media (max-width: 991px){
+
+  .custom-navbar{
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .navbar-nav{
+    gap: 10px !important;
+    margin-top: 20px;
+  }
+
+  .nav-item{
+    text-align: center;
+  }
+
+  .login-icon{
+    margin-top: 10px;
+  }
+
+}
+
+.user-name{
+
+  color:black;
+
+  animation:
+  desaparecer 3s;
+
+}
+
+@keyframes desaparecer{
+
+  0%{
+  opacity:1;
+  }
+
+  80%{
+  opacity:1;
+  }
+
+  100%{
+  opacity:0;
+  }
+
+}
