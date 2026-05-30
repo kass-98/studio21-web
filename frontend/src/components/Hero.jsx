@@ -1,10 +1,15 @@
 import "../styles/hero.css";
 import modelo from "../assets/inicio.JPG";
+import bodas from "../assets/bodas.jpg";
+import xv from "../assets/xv.jpg";
+import social from "../assets/social.jpg";
+
 import { Link } from "react-router-dom";
 
 
 const Hero = () => {
   return (
+    <>
     <section className="hero">
 
       <div className="hero-card">
@@ -29,6 +34,36 @@ const Hero = () => {
       </div>
 
     </section>
+
+    <section className="nuestro-trabajo">
+      <h2>Nuestro trabajo</h2>
+
+      <div className="trabajos-grid">
+
+        <div className="trabajo-card">
+          <img src={bodas} alt="Bodas" />
+          <h3>BODAS</h3>
+          
+        </div>
+
+        <div className="trabajo-card">
+          <img src={xv} alt="XV años" />
+          <h3>QUINCEAÑERAS</h3>
+          
+        </div>
+
+        <div className="trabajo-card">
+          <img src={social} alt="Social" />
+          <h3>SOCIALES</h3>
+          <Link to="/servicios">PORTAFOLIO </Link>
+        </div>
+
+      </div>
+
+    </section>
+
+    
+    </>
   );
 };
 

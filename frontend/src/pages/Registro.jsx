@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "../styles/registro.css";
 
 export default function Registro(){
 
@@ -69,9 +70,9 @@ error.message
 
 return(
 
-<div className="container mt-5">
+<div className="container-mt-5">
 
-<div className="card p-5">
+<div className="card-p-5">
 
 <h2>
 Crear cuenta

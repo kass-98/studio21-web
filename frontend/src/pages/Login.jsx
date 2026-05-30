@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import "../styles/Login.css";
 
 export default function Login() {
 
@@ -76,9 +77,9 @@ setError(error.message);
 
 return(
 
-<div className="container mt-5">
+<div className="login-container">
 
-<div className="card p-5">
+<div className="login-card">
 
 <h2 className="mb-4">
 Iniciar sesión
