@@ -91,3 +91,47 @@
   }
 
 }
+
+.dropdown-servicios{
+  position: relative;
+}
+
+.submenu{
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  min-width: 130px;
+
+  background: white;
+
+  display: none;
+  flex-direction: column;
+
+  padding: 12px 0;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+
+  z-index: 1000;
+}
+
+.submenu a{
+  color: #777; 
+  text-decoration: none;
+
+  font-family: "Akt", sans-serif;
+  font-size: .9rem;
+
+  padding: 10px 15px;
+
+  transition: .3s;
+}
+
+.submenu a:hover{
+  color: black; /* negro al pasar el cursor */
+  background: #f5f5f5;
+  padding-left: 20px;
+}
+.dropdown-servicios:hover .submenu{
+  display: flex;
+}

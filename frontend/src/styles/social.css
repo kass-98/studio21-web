@@ -1,0 +1,135 @@
+.social{
+  background: white;
+  border-top: 1px solid #d9d9d9;
+}
+
+/* HERO */
+
+.social-hero{
+  width: 100%;
+  height: 90vh;
+}
+
+.social-hero img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+.foto7{
+  object-position: center top;
+}
+
+.banner-img{
+  object-position: center top;
+}
+
+/* TEXTO */
+
+.social-texto{
+  text-align: center;
+  padding: 50px 20px 60px;
+  font-family: "Cinzel", serif;
+}
+
+.social-texto h2{
+  font-size: 28px;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  color: #666;
+}
+
+.social-texto p{
+  color: #666;
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.8;
+  font-size: 18px;
+}
+
+/* LAYOUT */
+
+.social-layout{
+  width: 90%;
+  margin: 0 auto 80px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.social-layout.reverse{
+  grid-template-columns: 1fr 2fr;
+}
+
+.social-grande img{
+  width: 100%;
+  height: 700px;
+  object-fit: cover;
+}
+
+.social-columna{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.social-columna img{
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+}
+
+/* FRASE */
+
+.social-frase{
+  text-align: center;
+  padding: 20px 20px 60px;
+  font-family: "Cinzel", serif;
+  color:#666
+}
+
+.social-frase h3{
+  max-width: 900px;
+  margin: auto;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+/* BANNER FINAL */
+
+.social-banner{
+  width: 100%;
+  height: 80vh;
+}
+
+.social-banner img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 900px){
+
+  .social-layout,
+  .social-layout.reverse{
+    grid-template-columns: 1fr;
+  }
+
+  .social-grande img{
+    height: 450px;
+  }
+
+  .social-columna img{
+    height: 250px;
+  }
+
+}

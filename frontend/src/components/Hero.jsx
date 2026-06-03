@@ -23,7 +23,7 @@ const Hero = () => {
           Perfectos
         </h1>
 
-        <Link to="/servicios" className="btn-reservar">
+        <Link to="/contacto" className="btn-reservar">
           <button>Reservar ahora</button>
         </Link>
         
@@ -42,7 +42,9 @@ const Hero = () => {
 
         <div className="trabajo-card">
           <img src={bodas} alt="Bodas" />
-          <h3>BODAS</h3>
+          <Link to="/servicios/bodas" className="btn-reservar">
+          <button>BODAS</button>
+        </Link>
           
         </div>
 
@@ -55,7 +57,7 @@ const Hero = () => {
         <div className="trabajo-card">
           <img src={social} alt="Social" />
           <h3>SOCIALES</h3>
-          <Link to="/servicios">PORTAFOLIO </Link>
+          
         </div>
 
       </div>

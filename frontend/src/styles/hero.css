@@ -77,7 +77,7 @@
   opacity: 0.7;
 }
 
-/* Imagen */
+
 .hero-image{
   width: 65%;
   margin-left: 250px;
@@ -107,7 +107,7 @@
   overflow: visible;
 }
 
-/* Card */
+
 .hero-card{
 
   position: relative;
@@ -146,7 +146,7 @@
 
 }
 
-/* Textos */
+
 
 .hero-subtitle{
 
@@ -225,3 +225,60 @@
   padding: 80px 5%;
 }
 
+.nosotros{
+  background: #0d0d0d;
+  color: #fff;
+  padding: 120px 10%;
+}
+
+.nosotros-container{
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Título */
+.nosotros-title{
+  font-family: "Cinzel", serif;
+  font-size: 38px;
+  letter-spacing: 4px;
+  margin-bottom: 40px;
+}
+
+/* Intro */
+.nosotros-intro{
+  font-size: 18px;
+  line-height: 1.9;
+  max-width: 800px;
+  margin: 0 auto 90px auto;
+  color: #cfcfcf;
+}
+
+
+.nosotros-grid{
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+.nosotros-card{
+  flex: 1;
+  min-width: 320px;
+  max-width: 480px;
+  text-align: left;
+}
+
+.nosotros-card h3{
+  font-family: "Cinzel", serif;
+  font-size: 22px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.nosotros-card p{
+  line-height: 1.8;
+  color: #d0d0d0;
+  font-size: 15.5px;
+}

@@ -68,11 +68,29 @@ export default function Navbar() {
             </Link>
           </li>
 
-          <li className="nav-item">
-            <Link className="nav-link custom-link" to="/servicios">
-              Servicios
-            </Link>
-          </li>
+          <li className="nav-item dropdown-servicios">
+
+  <span className="nav-link custom-link">
+    Servicios
+  </span>
+
+  <div className="submenu">
+
+    <Link to="/servicios/bodas">
+      Bodas
+    </Link>
+
+    <Link to="/servicios/xv">
+      XV Años
+    </Link>
+
+    <Link to="/servicios/social">
+      Social
+    </Link>
+
+  </div>
+
+</li>
 
           <li className="nav-item">
             <Link className="nav-link custom-link" to="/nosotros">
