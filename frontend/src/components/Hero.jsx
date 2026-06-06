@@ -8,6 +8,8 @@ import { Link } from "react-router-dom";
 
 
 const Hero = () => {
+
+  const token = localStorage.getItem("token");
   return (
     <>
     <section className="hero">
@@ -23,7 +25,10 @@ const Hero = () => {
           Perfectos
         </h1>
 
-        <Link to="/contacto" className="btn-reservar">
+        <Link
+          to={token ? "/reserva" : "/login?redirect=reserva"}
+          className="btn-reservar"
+        >
           <button>Reservar ahora</button>
         </Link>
         

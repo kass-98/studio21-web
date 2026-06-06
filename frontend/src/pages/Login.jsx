@@ -1,11 +1,8 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import "../styles/Login.css";
 
 export default function Login() {
-
-const navigate = useNavigate();
 
 const [form,setForm]=useState({
 email:"",
@@ -13,6 +10,11 @@ password:""
 });
 
 const [error,setError]=useState("");
+
+const [searchParams] = useSearchParams();
+
+const vieneDeReserva =
+  searchParams.get("redirect") === "reserva";
 
 const handleChange=(e)=>{
 
@@ -65,7 +67,15 @@ localStorage.setItem(
 JSON.stringify(data.user)
 );
 
-navigate("/");
+if (vieneDeReserva) {
+
+  window.location.href = "/reserva";
+
+} else {
+
+  window.location.href = "/";
+
+}
 
 }catch(error){
 
@@ -74,6 +84,7 @@ setError(error.message);
 }
 
 };
+
 
 return(
 
@@ -84,6 +95,16 @@ return(
 <h2 className="mb-4">
 Iniciar sesión
 </h2>
+
+{vieneDeReserva && (
+
+  <div className="alert alert-info">
+
+    Inicia sesión o crea una cuenta para reservar tu cita.
+
+  </div>
+
+)}
 
 <form onSubmit={handleSubmit}>
 

@@ -104,6 +104,14 @@ export default function Navbar() {
             </Link>
           </li>
 
+          {user && (
+            <li className="nav-item">
+              <Link className="nav-link custom-link" to="/mis-reservas">
+                Mis Reservas
+              </Link>
+            </li>
+          )}
+
           <li className="nav-item d-flex align-items-center gap-2">
 
             {user ? (

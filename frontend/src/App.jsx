@@ -1,6 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Reserva from "./pages/Reserva";
+import MisReservas from "./pages/MisReservas";
 
 import Home from "./pages/Home";
 import Login from "./pages/Login";
@@ -12,6 +14,7 @@ import Xv from "./pages/Xv";
 import Social from "./pages/Social";
 import Contacto from "./pages/Contacto";
 import Terminos from "./pages/Terminos";
+
 
 function App() {
   return (
@@ -29,6 +32,8 @@ function App() {
         <Route path="/servicios/social" element={<Social />} />
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/terminos" element={<Terminos />} />
+        <Route path="/reserva" element={<Reserva />} />
+        <Route path="/mis-reservas" element={<MisReservas />} />
       </Routes>
       <Footer/>
     </>
