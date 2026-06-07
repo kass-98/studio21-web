@@ -1,4 +1,4 @@
-.hero{
+.hero {
   width: 100%;
   min-height: 90vh;
 
@@ -12,9 +12,12 @@
   overflow: hidden;
 }
 
-/* Caja blanca */
-.hero-card{
+/* 
+   HERO CARD
+ */
+.hero-card {
   width: 550px;
+  max-width: 90%;
   height: 380px;
 
   background: #f3f3f3;
@@ -32,8 +35,8 @@
   padding: 20px;
 }
 
-/* Texto superior */
-.hero-subtitle{
+
+.hero-subtitle {
   font-family: "Cinzel", serif;
 
   font-size: 18px;
@@ -44,8 +47,8 @@
   margin-bottom: 30px;
 }
 
-/* Título principal */
-.hero-card h1{
+
+.hero-card h1 {
   font-family: "Akt", sans-serif;
 
   font-size: 58px;
@@ -57,8 +60,7 @@
   margin: 0;
 }
 
-/* Botón */
-.hero-card button{
+.hero-card button {
   margin-top: 40px;
 
   border: none;
@@ -73,17 +75,19 @@
   transition: 0.3s;
 }
 
-.hero-card button:hover{
+.hero-card button:hover {
   opacity: 0.7;
 }
 
-
-.hero-image{
+/* 
+   HERO IMAGE
+ */
+.hero-image {
   width: 65%;
   margin-left: 250px;
 }
 
-.hero-image img{
+.hero-image img {
   width: 100%;
   height: 85vh;
 
@@ -92,161 +96,47 @@
   filter: grayscale(100%);
 }
 
-/*resposinve inico*/
-/* RESPONSIVE */
-
-@media (max-width:768px){
-
-.hero{
-  min-height: auto;
-
-  flex-direction: column;
-
-  padding: 20px;
-
-  overflow: visible;
-}
-
-
-.hero-card{
-
-  position: relative;
-
-  left: 0;
-
-  width: 100%;
-  max-width: 380px;
-
-  height: auto;
-
-  padding: 35px 25px;
-
-  order: 2;
-
-}
-
-/* Imagen */
-.hero-image{
-
-  width: 100%;
-
-  margin-left: 0;
-
-  order: 1;
-
-}
-
-.hero-image img{
-
-  width: 100%;
-
-  height: 320px;
-
-  object-fit: cover;
-
-}
-
-
-
-.hero-subtitle{
-
-  font-size: 12px;
-
-  letter-spacing: 2px;
-
-}
-
-.hero-card h1{
-
-  font-size: 42px;
-
-}
-.trabajos-grid{
-    flex-wrap: wrap;
-  }
-
-  .trabajo-card{
-    width: 45%;
-  }
-}
-/* =======================
+/* 
    NUESTRO TRABAJO
-======================= */
-
-.nuestro-trabajo{
+*/
+.nuestro-trabajo {
   background: #fff;
   padding: 80px 5%;
   text-align: center;
 }
 
-.nuestro-trabajo h2{
+.nuestro-trabajo h2 {
   font-family: "Cinzel", serif;
   font-size: 32px;
   margin-bottom: 50px;
   letter-spacing: 3px;
+  color: gray;
 }
 
-.trabajos-grid{
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
 
-.trabajo-card{
-  width: 400px;
-  text-align: center;
-}
-
-.trabajo-card img {
-  width: 100%;
-  height: 350px;
-  object-fit: cover;
-  display: block;
-  image-rendering: auto;
-}
-
-.trabajo-card h3{
-  margin-top: 15px;
-  font-size: 20px;
-  font-weight: 400;
-}
-
-.trabajo-card a{
-  display: inline-block;
-  margin-top: 10px;
-  text-decoration: none;
-  color: black;
-  border-bottom: 1px solid black;
-  padding-bottom: 3px;
-}
-.nuestro-trabajo{
-  background: #fff;
-  color: #000;
-  padding: 80px 5%;
-}
-
-.nosotros{
+/* 
+   NOSOTROS
+ */
+.nosotros {
   background: #0d0d0d;
   color: #fff;
   padding: 120px 10%;
 }
 
-.nosotros-container{
+.nosotros-container {
   max-width: 1100px;
   margin: auto;
   text-align: center;
 }
 
-/* Título */
-.nosotros-title{
+.nosotros-title {
   font-family: "Cinzel", serif;
   font-size: 38px;
   letter-spacing: 4px;
   margin-bottom: 40px;
 }
 
-/* Intro */
-.nosotros-intro{
+.nosotros-intro {
   font-size: 18px;
   line-height: 1.9;
   max-width: 800px;
@@ -254,31 +144,210 @@
   color: #cfcfcf;
 }
 
-
-.nosotros-grid{
+.nosotros-grid {
   display: flex;
   gap: 60px;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-
-.nosotros-card{
+.nosotros-card {
   flex: 1;
   min-width: 320px;
   max-width: 480px;
   text-align: left;
 }
 
-.nosotros-card h3{
+.nosotros-card h3 {
   font-family: "Cinzel", serif;
   font-size: 22px;
   margin-bottom: 20px;
   letter-spacing: 2px;
 }
 
-.nosotros-card p{
+.nosotros-card p {
   line-height: 1.8;
   color: #d0d0d0;
   font-size: 15.5px;
+}
+
+/* 
+   SERVICIOS / TRABAJOS
+ */
+
+.servicios-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* BODAS (GRANDE) */
+.hero-card-bodas {
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-card-bodas img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.hero-card-bodas:hover img {
+  transform: scale(1.05);
+}
+
+.trabajos-grid.dos-columnas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* CARDS PEQUEÑAS */
+.small-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s ease;
+}
+
+.small-card:hover img {
+  transform: scale(1.05);
+}
+
+.hero-card-bodas,
+.small-card {
+  position: relative;
+  cursor: pointer;
+}
+
+
+
+/* 
+   RESPONSIVE GLOBAL */
+@media (max-width: 768px) {
+
+  /* HERO */
+  .hero {
+    flex-direction: column;
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .hero-card {
+    position: relative;
+    left: 0;
+
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+
+    order: 2;
+    margin-top: 20px;
+  }
+
+  .hero-image {
+    width: 100%;
+    margin-left: 0;
+    order: 1;
+  }
+
+  .hero-image img {
+    height: 280px;
+  }
+
+  .hero-card h1 {
+    font-size: 38px;
+  }
+
+  .hero-subtitle {
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+}
+
+/* 
+  TEXTO OVERLAY ANIMADO
+*/
+
+
+.hero-card-bodas,
+.small-card {
+  position: relative;
+  overflow: hidden;
+}
+
+/* OSCURECER */
+.hero-card-bodas::after,
+.small-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0);
+  transition: 0.4s;
+  z-index: 1;
+}
+
+
+.hero-card-bodas::before,
+.small-card::before {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 20px);
+  opacity: 0;
+
+  color: white;
+  font-size: 28px;
+  letter-spacing: 3px;
+  font-family: "Cinzel", serif;
+
+  transition: 0.4s ease;
+  z-index: 2;
+}
+
+/* HOVER EFECTO */
+.hero-card-bodas:hover::after,
+.small-card:hover::after {
+  background: rgba(0,0,0,0.35);
+}
+
+.hero-card-bodas:hover::before,
+.small-card:hover::before {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+.hero-card-bodas::before {
+  content: "BODAS";
+}
+
+.small-card.xv::before {
+  content: "XV AÑOS";
+}
+
+.small-card.social::before {
+  content: "SOCIAL";
+}
+
+/**/
+.hero-card-bodas::before,
+.hero-card-bodas::after,
+.small-card::before,
+.small-card::after {
+  pointer-events: none;
+}
+.hero-card-bodas a,
+.small-card a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.hero-card-bodas img,
+.small-card img {
+  display: block;
 }

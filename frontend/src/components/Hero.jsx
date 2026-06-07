@@ -43,29 +43,35 @@ const Hero = () => {
     <section className="nuestro-trabajo">
       <h2>Nuestro trabajo</h2>
 
-      <div className="trabajos-grid">
+ <div className="servicios-container">
 
-        <div className="trabajo-card">
-          <img src={bodas} alt="Bodas" />
-          <Link to="/servicios/bodas" className="btn-reservar">
-          <button>BODAS</button>
-        </Link>
-          
-        </div>
+  <div className="trabajo-card hero-card-bodas">
+    <Link to="/servicios/bodas">
+      <img src={bodas} alt="Bodas" />
+      
+    </Link>
+  </div>
 
-        <div className="trabajo-card">
-          <img src={xv} alt="XV años" />
-          <h3>QUINCEAÑERAS</h3>
-          
-        </div>
 
-        <div className="trabajo-card">
-          <img src={social} alt="Social" />
-          <h3>SOCIALES</h3>
-          
-        </div>
+  <div className="trabajos-grid dos-columnas">
 
-      </div>
+    <div className="trabajo-card small-card xv">
+      <Link to="/servicios/xv">
+        <img src={xv} alt="XV años" />
+        
+      </Link>
+    </div>
+
+    <div className="trabajo-card small-card social">
+      <Link to="/servicios/social">
+        <img src={social} alt="Social" />
+        
+      </Link>
+    </div>
+
+  </div>
+
+</div>
 
     </section>
 

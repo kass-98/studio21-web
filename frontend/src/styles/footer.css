@@ -8,12 +8,11 @@
   gap: 50px;
 }
 
-/* columnas */
 .footer-col{
   flex: 1;
 }
 
-/* IZQUIERDA */
+
 .footer-left h2{
   font-size: 32px;
   letter-spacing: 4px;
@@ -28,8 +27,6 @@
 }
 
 
-
-/* DERECHA */
 .footer-right h3{
   font-size: 12px;
   letter-spacing: 3px;
@@ -57,7 +54,6 @@
   transform: translateX(5px);
 }
 
-/* separador */
 .footer-line{
   height: 1px;
   background: rgba(255,255,255,0.1);

@@ -17,8 +17,6 @@
   
 }
 
-/* TEXTOS */
-
 .xv-texto{
   text-align: center;
   padding: 70px 20px;
@@ -42,8 +40,6 @@
   margin: auto;
   line-height: 1.7;
 }
-
-/* GRID */
 
 .xv-grid{
   width: 90%;
