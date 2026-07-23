@@ -3,7 +3,7 @@ import User from '../models/User.js';
 import jwt from 'jsonwebtoken';
 
 
-//controlador registro usuario
+//controlador registro de usuarios
 export const registro = async (req, res)=>{
   try{
     const {name, email, password, role}= req.body;
@@ -24,6 +24,7 @@ export const registro = async (req, res)=>{
       password: passwordEncriptado,
       role
     });
+
     await user.save();
     res.status(201).json({message: 'usuario registrado exitosamente'});
   }catch (error) {
@@ -36,7 +37,7 @@ export const registro = async (req, res)=>{
 export const login = async (req, res) => {
   try{
     const {email, password} = req.body;
-    //validar que no esten vacios el email y password
+    //validar que los campos no esten vacios el email y password
     if(!email || !password){
       return res.status(400).json({message: 'email y password son requeridos'});
     }
